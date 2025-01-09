@@ -1,5 +1,6 @@
 // Array para armazenar os dados
 let listaDados = JSON.parse(localStorage.getItem('listaDados')) || [];
+let registrosExclusao = JSON.parse(localStorage.getItem('registrosExclusao')) || [];
 
 // Função para salvar e exibir os dados
 function salvarDados(event) {
@@ -16,9 +17,9 @@ function salvarDados(event) {
     const dado = {
         nome: nome,
         apartamento: apartamento,
-        quantidade: parseInt(quantidade, 10), // Certificando-se de que é um número
+        quantidade: parseInt(quantidade, 10),
         data: data,
-        codigo: codigo
+        codigo: codigo,
     };
 
     // Adicionando o novo dado ao array
@@ -43,7 +44,7 @@ function atualizarLista() {
 
     // Iterando sobre todos os dados salvos no array e adicionando à lista
     listaDados.forEach((dado, index) => {
-        totalQuantidade += dado.quantidade;  // Soma a quantidade
+        totalQuantidade += dado.quantidade;
 
         const item = document.createElement('li');
         item.innerHTML = `
@@ -64,7 +65,29 @@ function atualizarLista() {
 
 // Função para excluir um dado da lista
 function excluirDado(index) {
-    listaDados.splice(index, 1);  // Remove o dado do array
+    const nomeRecebedor = prompt("Por favor, insira o nome do recebedor:");
+    if (!nomeRecebedor) {
+        alert("A exclusão foi cancelada.");
+        return;
+    }
+
+    const horaRecebimento = new Date().toLocaleTimeString();
+    const dataAtual = new Date().toLocaleDateString();
+
+    // Salvando os dados de exclusão
+    const registroExclusao = {
+        ...listaDados[index],
+        recebedor: nomeRecebedor,
+        hora: horaRecebimento,
+        dataExclusao: dataAtual // Adicionando a data de exclusão
+    };
+    registrosExclusao.push(registroExclusao);
+
+    // Atualizando o LocalStorage para registros de exclusão
+    localStorage.setItem('registrosExclusao', JSON.stringify(registrosExclusao));
+
+    // Removendo o dado do array principal
+    listaDados.splice(index, 1);
 
     // Atualizando o LocalStorage
     localStorage.setItem('listaDados', JSON.stringify(listaDados));
@@ -74,13 +97,19 @@ function excluirDado(index) {
 
 // Função para exportar os dados para um arquivo de texto
 function exportarParaTxt() {
+    const dataAtual = new Date().toLocaleDateString();
     let totalQuantidade = listaDados.reduce((total, dado) => total + dado.quantidade, 0);
 
-    const conteudo = listaDados.map(dado => 
+    const conteudoLista = listaDados.map(dado => 
         `Nome: ${dado.nome}\nApartamento: ${dado.apartamento}\nQuantidade: ${dado.quantidade}\nData: ${dado.data}\nCódigo do Produto: ${dado.codigo}\n\n`
     ).join('');
 
-    const conteudoCompleto = `${conteudo}Quantidade Total: ${totalQuantidade}`;
+    // Filtra registros de exclusão para incluir apenas os do dia atual
+    const conteudoExclusao = registrosExclusao.filter(dado => dado.dataExclusao === dataAtual).map(dado =>
+        `Nome: ${dado.nome}\nApartamento: ${dado.apartamento}\nQuantidade: ${dado.quantidade}\nData: ${dado.data}\nCódigo do Produto: ${dado.codigo}\nRecebedor: ${dado.recebedor}\nHora: ${dado.hora}\n\n`
+    ).join('');
+
+    const conteudoCompleto = `${conteudoLista}Quantidade Total: ${totalQuantidade}\n\nRegistros de Exclusão do Dia:\n${conteudoExclusao}`;
 
     const blob = new Blob([conteudoCompleto], { type: 'text/plain' });
     const link = document.createElement('a');
