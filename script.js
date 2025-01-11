@@ -33,7 +33,7 @@ function salvarDados(event) {
 
     // Limpando o formulário
     document.getElementById('formCadastro').reset();
-}
+} 
 
 // Função para atualizar a lista de dados exibidos
 function atualizarLista() {
@@ -54,6 +54,7 @@ function atualizarLista() {
             <strong>Data:</strong> ${dado.data}<br>
             <strong>Código do Produto:</strong> ${dado.codigo}<br>
             <button onclick="excluirDado(${index})">Excluir</button>
+            <button onclick="adicionarQuantidade(${index})">Adicionar nova encomenda</button>
         `;
         lista.appendChild(item);
     });
@@ -61,6 +62,21 @@ function atualizarLista() {
     // Exibe o total de quantidade
     const totalDisplay = document.getElementById('totalQuantidade');
     totalDisplay.textContent = `Quantidade Total: ${totalQuantidade}`;
+}
+
+// Função para adicionar quantidade a um dado existente
+function adicionarQuantidade(index) {
+    const quantidadeAdicional = prompt("Insira a quantidade adicional:");
+    if (quantidadeAdicional && !isNaN(quantidadeAdicional)) {
+        listaDados[index].quantidade += parseInt(quantidadeAdicional, 10);
+
+        // Atualizando o LocalStorage
+        localStorage.setItem('listaDados', JSON.stringify(listaDados));
+
+        atualizarLista();  // Atualiza a lista exibida
+    } else {
+        alert("Por favor, insira um número válido.");
+    }
 }
 
 // Função para excluir um dado da lista
@@ -104,12 +120,18 @@ function exportarParaTxt() {
         `Nome: ${dado.nome}\nApartamento: ${dado.apartamento}\nQuantidade: ${dado.quantidade}\nData: ${dado.data}\nCódigo do Produto: ${dado.codigo}\n\n`
     ).join('');
 
-    // Filtra registros de exclusão para incluir apenas os do dia atual
-    const conteudoExclusao = registrosExclusao.filter(dado => dado.dataExclusao === dataAtual).map(dado =>
+    // Filtra registros de exclusão para incluir apenas os dos últimos 24 horas
+    const dataLimite = new Date();
+    dataLimite.setDate(dataLimite.getDate() - 1);
+
+    const conteudoExclusao = registrosExclusao.filter(dado => {
+        const dataExclusao = new Date(`${dado.dataExclusao} ${dado.hora}`);
+        return dataExclusao >= dataLimite;
+    }).map(dado =>
         `Nome: ${dado.nome}\nApartamento: ${dado.apartamento}\nQuantidade: ${dado.quantidade}\nData: ${dado.data}\nCódigo do Produto: ${dado.codigo}\nRecebedor: ${dado.recebedor}\nHora: ${dado.hora}\n\n`
     ).join('');
 
-    const conteudoCompleto = `${conteudoLista}Quantidade Total: ${totalQuantidade}\n\nRegistros de Exclusão do Dia:\n${conteudoExclusao}`;
+    const conteudoCompleto = `${conteudoLista}Quantidade Total: ${totalQuantidade}\n\nRegistros de Exclusão das Últimas 24 Horas:\n${conteudoExclusao}`;
 
     const blob = new Blob([conteudoCompleto], { type: 'text/plain' });
     const link = document.createElement('a');
