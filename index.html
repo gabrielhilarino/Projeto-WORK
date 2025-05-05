@@ -15,16 +15,16 @@
          
         
         <label for="nome">Nome do Morador : </label>
-        <input type ="text" id="nome" name="nome" required>
+        <input type ="text" id="nome" name="nome" placeholder="Letra Maiúscula e apenas nome e sobrenome ex.: JOSÉ BENTO" required>
 
         <label for="apartamento">Qual Apartamento : </label>
-        <input type ="text" id="apartamento" name="apartamento" required>
+        <input type ="text" id="apartamento" name="apartamento" placeholder="Letra Maiúscula ex.: 101-B " required>
 
         <label for="quantidade">Qual a quantidade : </label>
-        <input type ="number" id="quantidade" name="quantidade" required>
+        <input type ="number" id="quantidade" name="quantidade" value="1" required>
 
         <label for="codigo">Código do Produto:</label>
-        <input type="text" id="codigo">
+        <input type="text" id="codigo" placeholder="ex.: BR21222322425">
 
         <label for="data">Data de hoje  : </label>
         <input type ="date" id="data" name="data" required>
@@ -37,10 +37,17 @@
      <h2>Dados Salvos</h2> 
      <ul id="listaDados"></ul>
      <p id="totalQuantidade">Quantidade Total: 0</p>
-     <button id="exportarBtn">Exportar para Bloco de Notas</button>
+     <button id="exportarPdfBtn">Exportar como PDF</button>
+     <input type="text" id="campoBusca" placeholder="Buscar por nome ou apartamento..." oninput="filtrarLista()">
+    
+     <p><a href="index2.html" target="_blank" id="link">Lista de entregas</a></p>
+
+
+
 
  </div>  
 </div>
 <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
 </html>
