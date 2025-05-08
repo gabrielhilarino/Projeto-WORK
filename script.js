@@ -26,10 +26,7 @@ const bancoDeDadosMoradores = [
         { nome: "FELIPE GOMES", apartamento: "202-A", whatsapp: "5561983584688"},
         { nome: "GABRIEL GOMES", apartamento: "202-A", whatsapp: "5561983584688"},
     //203-A
-        { nome: "CAMILA SILVA", apartamento: "203-A", whatsapp: "5561985155006"}, 
-        { nome: "ANA CLARA", apartamento: "203-A", whatsapp: "5561985155006"},
-        { nome: "ELAURA SILVA", apartamento: "203-A", whatsapp: "5561985155006"},
-        { nome: "CAROLINA DA SILVA", apartamento: "203-A", whatsapp: "5561985155006"},
+        { nome: "CRISTINE CAMPOS", apartamento: "203-A", whatsapp: "5561962602428"}, 
         //204-A
         { nome: "KITIANE POLICARPO", apartamento: "204-A", whatsapp: "5561992527768"}, 
         { nome: "MARCIO MENDES", apartamento: "204-A", whatsapp: "5561992527768"},
@@ -54,10 +51,7 @@ const bancoDeDadosMoradores = [
         { nome: "CLAUDIO MACHADO", apartamento: "304-A", whatsapp: "5561981101044"}, 
         { nome: "ROSALBA FERNANDES", apartamento: "304-A", whatsapp: "5561981101044"},   
         //401-A
-        { nome: "SEBASTIAO FERREIRA", apartamento: "401-A", whatsapp: "5561996054728"}, 
-        { nome: "MARIA ENGELA", apartamento: "401-A", whatsapp: "5561996054728"},
-        { nome: "PEDRO HENRIQUE", apartamento: "401-A", whatsapp: "5561996054728"}, 
-        { nome: "CARLOS EDUARDO", apartamento: "401-A", whatsapp: "5561996054728"},
+        { nome: "SEBASTIAO FERREIRA", apartamento: "401-A", whatsapp: "5561996054278"}, 
         //402-A
         { nome: "GIOVANI RIBEIRO", apartamento: "402-A", whatsapp: "5561985175413"}, 
         { nome: "EDINALVA DE OLIVEIRA", apartamento: "402-A", whatsapp: "5561985175413"},
@@ -85,8 +79,7 @@ const bancoDeDadosMoradores = [
         { nome: "JAMILSON ALVES", apartamento: "503-A", whatsapp: "5561981971062"}, 
         { nome: "ELENILDA MARIA", apartamento: "503-A", whatsapp: "5561981971062"},
         //504-A
-        { nome: "RIVIANE DA SILVA", apartamento: "504-A", whatsapp: ""}, { nome: "FERNANDO AUGUSTO", apartamento: "504-A", whatsapp: ""},
-        { nome: "FERNANDA KAREN", apartamento: "504-A", whatsapp: ""}, { nome: "DANIELLE HADASSA", apartamento: "504-A", whatsapp: ""},  
+        { nome: "RIVIANE DA SILVA", apartamento: "504-A", whatsapp: "5561982977215"},  
         //601-A
         { nome: "WILSON LUIZ", apartamento: "601-A", whatsapp: "5561992245383"}, 
         { nome: "SAMANTHA DA ROCHA", apartamento: "601-A", whatsapp: "5561992245383"},
@@ -112,10 +105,9 @@ const bancoDeDadosMoradores = [
         { nome: "DHANNY MORAIS ", apartamento: "702-A", whatsapp: "5561992245414"}, 
         { nome: "LETICIA BEATRIZ", apartamento: "702-A", whatsapp: "5561992245414"},
         //703-A
-        { nome: "THIAGO ALVES", apartamento: "703-A", whatsapp: "5561985315635"}, 
+        { nome: "THIAGO", apartamento: "703-A", whatsapp: "5561984052444"}, 
         //704-A
-        { nome: "TANIA LIMA", apartamento: "704-A", whatsapp: ""}, { nome: "MATHEUS LIMA", apartamento: "704-A", whatsapp: ""}, 
-        { nome: "LUCAS HENRIQUE ", apartamento: "704-A", whatsapp: ""}, { nome: "CLAUDIA ALINE", apartamento: "704-A", whatsapp: ""},
+        { nome: "TANIA LIMA", apartamento: "704-A", whatsapp: "5561981793668"},
         //801-A
         { nome: "JOSE IVAN", apartamento: "801-A", whatsapp: "5561984761366"}, 
         { nome: "ELIANE DO CARMO", apartamento: "801-A", whatsapp: "5561984761366"},
@@ -167,8 +159,7 @@ const bancoDeDadosMoradores = [
         { nome: "ANA CAROLINA", apartamento: "1004-A", whatsapp: "561996274951"},
         { nome: "ANA CLARA", apartamento: "1004-A", whatsapp: "561996274951"},
         //1101-A
-        { nome: "EVERTON FERNANDES", apartamento: "1101-A", whatsapp: "5561982932205"},
-        { nome: "ANNA LUIZA", apartamento: "1101-A", whatsapp: "5561982932205"},
+        { nome: "GABRIELA MAGALHAES", apartamento: "1101-A", whatsapp: "5561998343240"},
         //1102-A
         { nome: "LUANA NUNES", apartamento: "1102-A", whatsapp: "5561991058744"},
         { nome: "LAIS NUNES", apartamento: "1102-A", whatsapp: "5561991058744"},
@@ -194,9 +185,7 @@ const bancoDeDadosMoradores = [
         { nome: "DIEGO REIS", apartamento: "1203-A", whatsapp: "5561986816681"},
         { nome: "DANIEL REIS", apartamento: "1203-A", whatsapp: "5561986816681"},
         //1204A
-        { nome: "ANDERNILSON MIRA", apartamento: "1204-A", whatsapp: ""},
-        { nome: "LEONO MIRA", apartamento: "1204-A", whatsapp: ""},
-        { nome: "ISADORA CHAVES", apartamento: "1204-A", whatsapp: ""},
+        { nome: "ISADORA CHAVES", apartamento: "1204-A", whatsapp: "5561998349150"},
         //1301A
         { nome: "VINICIUS SOUSA", apartamento: "1301-A", whatsapp: "5561982228025"},
         { nome: "ALIANA SERPA", apartamento: "1301-A", whatsapp: "5561982228025"},
@@ -210,8 +199,7 @@ const bancoDeDadosMoradores = [
         { nome: "ANDRESSA GONÇALVES", apartamento: "1303-A", whatsapp: "5561998816889"},
         { nome: "DANIEL TELES", apartamento: "1303-A", whatsapp: "5561998816889"},
         //1304A
-        { nome: "LUCAS ALENCAR", apartamento: "1304-A", whatsapp: ""},
-        { nome: "NICOLE LIMA", apartamento: "1304-A", whatsapp: ""},
+        { nome: "LUCAS ALENCAR", apartamento: "1304-A", whatsapp: "5561991047997"},
         //1401A
         { nome: "ANDERSON LUIZ", apartamento: "1401-A", whatsapp: "5561999892201"},
         { nome: "LEIDIJANE NOGUEIRA", apartamento: "1401-A", whatsapp: "5561999892201"},
@@ -264,9 +252,7 @@ const bancoDeDadosMoradores = [
         { nome: "SIMARA", apartamento: "301-B", whatsapp: "5561999834234"},
         { nome: "CLAUDIA SALES", apartamento: "301-B", whatsapp: "5561999834234"},
         //302B
-        { nome: "FABIO DE ALBUQUERQUE", apartamento: "302-B", whatsapp: ""},
-        { nome: "SANDRA PEREIRA", apartamento: "302-B", whatsapp: ""},
-        { nome: "CARLOS EDUARDO", apartamento: "302-B", whatsapp: ""},
+        { nome: "FABIO DE ALBUQUERQUE", apartamento: "302-B", whatsapp: "5561984358506"},
         //303B
         { nome: "ANILTON SOARES", apartamento: "303-B", whatsapp: "5561992141611"},
         { nome: "MARIA BETANIA", apartamento: "303-B", whatsapp: "5561992141611"},
@@ -333,16 +319,12 @@ const bancoDeDadosMoradores = [
         { nome: "ANA CLARA MEDEIROS", apartamento: "701-B", whatsapp: "5561999673270"},
         { nome: "HIAGO MEDEIROS ", apartamento: "701-B", whatsapp: "5561999673270"},
         //702B
-        { nome: "ANTONIO JUNIO", apartamento: "702-B", whatsapp: ""},
-        { nome: "SILVANA PEREIRA", apartamento: "702-B", whatsapp: ""},
-        { nome: "ENZO JUNIO", apartamento: "702-B", whatsapp: ""},
+        { nome: "SILVANA PEREIRA", apartamento: "702-B", whatsapp: "5561982992901"},
         //703B
         { nome: "BIANCA JAMILE", apartamento: "703-B", whatsapp: "5561991208282"},
         { nome: "ESTER NASCIMENTO", apartamento: "703-B", whatsapp: "5561991208282"},
         { nome: "VINNICIUS WILSON", apartamento: "703-B", whatsapp: "5561991208282"},
         //704B
-        { nome: "CAROLINA DE FREITAS", apartamento: "704-B", whatsapp: "5561992731724"},
-        { nome: "MAYLA DE FREITAS", apartamento: "704-B", whatsapp: "5561992731724"},
         { nome: "MALBA SIBELY", apartamento: "704-B", whatsapp: "5561994578927"},
         //801B
         { nome: "JONNY WILSON", apartamento: "801-B", whatsapp: "5561984400264"},
@@ -387,8 +369,7 @@ const bancoDeDadosMoradores = [
         { nome: "GRAZIELLE DORNELES", apartamento: "1003-B", whatsapp: "5561993526838"},
         { nome: "MARCELO MOREIRA", apartamento: "1003-B", whatsapp: "5561993526838"},
         //1004-B
-        { nome: "JOAO PAULO SOARES", apartamento: "1004-B", whatsapp: "5561984785041"},
-        { nome: "AMANDA CARDOSO", apartamento: "1004-B", whatsapp: "5561984785041"},
+        { nome: "JASIEL SILVA", apartamento: "1004-B", whatsapp: "5561981042595"},
         //1101
         { nome: "DANIELLE APARECIDA", apartamento: "1101-B", whatsapp: "5561985221171"},
         { nome: "THIAGO MATOS", apartamento: "1101-B", whatsapp: "5561985221171"},
@@ -439,11 +420,7 @@ const bancoDeDadosMoradores = [
         { nome: "DANIEL MACEDO", apartamento: "1301-B", whatsapp: "5561981386316"},
         { nome: "JOSEMAR BARBOSA", apartamento: "1301-B", whatsapp: "5561981386316"},
         //1302B
-        { nome: "DIEGO SUEDY", apartamento: "1302-B", whatsapp: ""},
-        { nome: "EVENLY CRISTINE", apartamento: "1302-B", whatsapp: ""},
-        { nome: "NUBIA ROCHA", apartamento: "1302-B", whatsapp: ""},
-        { nome: "FELIPE ROCHA", apartamento: "1302-B", whatsapp: ""},
-        { nome: "CLEUZA ALVES", apartamento: "1302-B", whatsapp: ""},
+        { nome: "NUBIA ROCHA", apartamento: "1302-B", whatsapp: "5561991165555"},
         //1303B
         { nome: "AILTON MANOEL", apartamento: "1303-B", whatsapp: "5561984312447"},
         { nome: "HELEN CRISTINA", apartamento: "1303-B", whatsapp: "5561984312447"},
@@ -496,7 +473,7 @@ function gerarLinkWhatsApp(nome,apartamento) {
         alert("Número de WhatsApp não encontrado para este morador.");
         return "#";
     }
-    const mensagem = encodeURIComponent(`Olá ${nome}, uma encomenda para a unidade ${apartamento} chegou, assim que possível venha retira-la na portaria, obrigado.`);
+    const mensagem = encodeURIComponent(`Olá, entrega para ${nome}, uma encomenda para a unidade ${apartamento} chegou, assim que possível venha retira-la na portaria, obrigado.`);
     return `whatsapp://send?phone=${numeroWhatsApp}&text=${mensagem}`;
 }
 
